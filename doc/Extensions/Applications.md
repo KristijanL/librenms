@@ -20,6 +20,7 @@ Different applications support a variety of ways collect data: by direct connect
 1. [Raspberry PI](#raspberry-pi) - SNMP extend
 1. [TinyDNS/djbdns](#tinydns-aka-djbdns) - Agent
 1. [Unbound](#unbound) - Agent
+1. [Postgres](#postgres) - Agent
 1. [Agent Setup](#agent-setup)
 
 
@@ -290,6 +291,19 @@ server:
 
 Restart your unbound after changing the configuration,v erify it is working by running /usr/lib/check_mk_agent/local/unbound.sh
 
+### Postgres
+
+##### Agent
+[Install the agent](#agent-setup) on this device if it isn't already and copy the `postgres.sh` script to `/usr/lib/check_mk_agent/local/`
+
+Postgres configuration:
+
+```text
+# some text here...
+...
+```
+
+Verify it is working by running /usr/lib/check_mk_agent/local/postgres.sh
 
 
 Agent Setup
